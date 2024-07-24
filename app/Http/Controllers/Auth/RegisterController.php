@@ -49,10 +49,17 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'full_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'user_id' => ['required', 'unique:users', 'min:2',],
+            'age' => ['required',],
+            'city' => ['required',],
+            'type' => ['required', ],
+            'avatar' => ['required',],
+            'gender' => ['required',],
         ]);
+
     }
 
     /**
@@ -63,10 +70,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+
+        $file_extension = $data['avatar']->getClientOriginalExtension();
+        $file_name = time() . '.' . $file_extension;
+        $path = 'images/users';
+        $data['avatar']->move($path, $file_name);
+
         return User::create([
-            'name' => $data['name'],
+            'full_name' => $data['full_name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'user_id' => $data['user_id'],
+            'age' => $data['age'],
+            'city' => $data['city'],
+            'type' => $data['type'],
+            'avatar' => $file_name,
+            'gender' => $data['gender'],
+
         ]);
     }
 }
