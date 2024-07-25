@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/Profile', 'App\Http\Controllers\ProfileController@index')->name('profile');
+
+Route::get('/posts', 'App\Http\Controllers\PostController@index')->name('allposts');
+
+Route::get('/dashbord', 'App\Http\Controllers\DashbordController@index')->name('dashbord');
+
