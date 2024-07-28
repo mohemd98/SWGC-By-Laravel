@@ -6,7 +6,9 @@
             <div class="col-md-4">
                 <div class="card w-100">
                     <div class="card-body">
-                        <h5 class="card-header text-center" style="font-size: 26px; height: 50px;background-color: #1C315E; border-radius: 5px; color: white;">الاشخاص المقترحون</h5>
+                        <h5 class="card-header text-center"
+                            style="font-size: 26px; height: 50px;background-color: #1C315E; border-radius: 5px; color: white;">
+                            الاشخاص المقترحون</h5>
                         <div class="card-body dash-user">
                             <div id="user_list"></div>
                         </div>
@@ -19,7 +21,9 @@
                 <div class="card w-85">
                     <div class="card-body text-center">
                         <!-- <input type="search" name="" style="width: 90%;" id="" placeholder="كتابة منشور"> -->
-                        <h5 class="card-header text-center" style="font-size: 26px; height: 50px;background-color: #1C315E; border-radius: 5px; color: white;">نشر منشور</h5>
+                        <h5 class="card-header text-center"
+                            style="font-size: 26px; height: 50px;background-color: #1C315E; border-radius: 5px; color: white;">
+                            نشر منشور</h5>
 
                         <!-- Button trigger modal -->
                         <!-- <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -27,33 +31,37 @@
                         </button> -->
                         <div class="row dashbord-post-posts">
                             <div class="col-md-4">
-                                <button type="button" class="btn btn-primary mt-3 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <button type="button" class="btn btn-primary mt-3 " data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
                                     عمـل
                                 </button>
                             </div>
                             <div class="col-md-4">
-                                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
                                     مـنحه
                                 </button>
                             </div>
                             <div class="col-md-4">
-                                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
                                     دوره
                                 </button>
                             </div>
                         </div>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">منشور</h5>
-                                        <button type="button" style="margin-left: 0;" class="btn-close postnepos" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <button type="button" style="margin-left: 0;" class="btn-close postnepos"
+                                                data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <form method="post" class="row" id="post_form" enctype="multipart/form-data">
-
                                             <!--  -->
                                             <div class="col-md-6 ">
                                                 <label for="" class="form-label">اختر صوره</label>
@@ -87,78 +95,122 @@
                                             <!--  -->
                                             <div class="col-md-6 mt-2">
                                                 <label for="" class="form-label">اختر المنطقه</label>
-                                                <input class="form-control" name="mant" type="text" placeholder="منطقه" required />
+                                                <input class="form-control" name="mant" type="text" placeholder="منطقه"
+                                                       required/>
                                             </div>
 
                                             <div class="col-md-6 mt-2">
                                                 <label for="" class="form-label">عنوان الرئيسي</label>
-                                                <input class="form-control" name="title" type="text" placeholder="العنوان الرئيسي للمنشور" required />
+                                                <input class="form-control" name="title" type="text"
+                                                       placeholder="العنوان الرئيسي للمنشور" required/>
                                             </div>
 
                                             <!--  -->
                                             <div class="col-md-12">
                                                 <label class="form-label" for="post_content"> </label>
-                                                <textarea class="form-control" placeholder="اكتب محتوى الي تريد نشره" id="post_content" style="height: 100px" name="post_content" required></textarea>
+                                                <textarea class="form-control" placeholder="اكتب محتوى الي تريد نشره"
+                                                          id="post_content" style="height: 100px" name="post_content"
+                                                          required></textarea>
                                             </div>
 
                                             <!-- ------------------------------------------- -->
                                             <div class="typinpt1">
                                                 <label class="form-check-label">منحه</label>
-                                                <input class="form-check-input" type="radio" name="chos" value="منحه" required>
+                                                <input class="form-check-input" type="radio" name="chos" value="منحه"
+                                                       required>
                                             </div>
                                             <div class="typinpt2">
                                                 <label class="form-check-label">دوره</label>
-                                                <input class="form-check-input" type="radio" name="chos" value="دوره" required>
+                                                <input class="form-check-input" type="radio" name="chos" value="دوره"
+                                                       required>
                                             </div>
                                             <div class="typinpt3">
                                                 <label class="form-check-label">عمل</label>
-                                                <input class="form-check-input" type="radio" name="chos" value="عمل" required>
+                                                <input class="form-check-input" type="radio" name="chos" value="عمل"
+                                                       required>
                                             </div>
                                             <!-- -------------------------------------------- -->
 
                                             <div class="wantinput1">
                                                 <label class="form-check-label">ابحث عن</label>
-                                                <input class="form-check-input" type="radio" name="wont" value="ابحث عن" required>
+                                                <input class="form-check-input" type="radio" name="wont" value="ابحث عن"
+                                                       required>
                                             </div>
                                             <div class="wantinput2">
                                                 <label class="form-check-label">احتاج الى</label>
-                                                <input class="form-check-input" type="radio" name="wont" value="احتاج الى" required>
+                                                <input class="form-check-input" type="radio" name="wont"
+                                                       value="احتاج الى" required>
                                             </div>
                                             <!-- -------------------------------------------- -->
                                             <div class="typinpt1">
                                                 <label class="form-check-label">ذكر</label>
-                                                <input class="form-check-input" type="radio" name="gender" value="ذكر" required>
+                                                <input class="form-check-input" type="radio" name="gender" value="ذكر"
+                                                       required>
                                             </div>
                                             <div class="typinpt2">
                                                 <label class="form-check-label">انثى</label>
-                                                <input class="form-check-input" type="radio" name="gender" value="انثى" required>
+                                                <input class="form-check-input" type="radio" name="gender" value="انثى"
+                                                       required>
                                             </div>
                                             <div class="typinpt3">
                                                 <label class="form-check-label">كلا الجنسين</label>
-                                                <input class="form-check-input" type="radio" name="gender" value="كلا الجنسين" required>
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                       value="كلا الجنسين" required>
                                             </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <input type="submit" id="send"  value="انشر" class="btn btn-primary">
-                                    </div>
-                                    </form>
 
+                                            <div class="modal-footer">
+                                                <input type="submit" id="send" value="انشر" class="btn btn-primary">
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="card w-85">
-                    <div class="card-body">
-                        <h5 class="card-header text-center" style="font-size: 26px; height: 50px;background-color: #1C315E; border-radius: 5px; color: white;">المنشورات</h5>
-                        <div class="panel-body">
-                            <div id="post_list"></div>
+                    <br>
+                    <div class="card w-85">
+                        <div class="card-body">
+                            <h5 class="card-header text-center"
+                                style="font-size: 26px; height: 50px;background-color: #1C315E; border-radius: 5px; color: white;">
+                                المنشورات</h5>
+                            <div class="panel-body">
+                                <div id="post_list"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-@endsection
+        @endsection
+
+        @section('scripts')
+            <meta name="csrf-token" content="{{ csrf_token() }}">
+
+            <script>
+                $(document).ready(function () {
+                    // Set up CSRF token in AJAX headers
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+
+                    $('#post_form').on('submit', function (e) {
+                        e.preventDefault();
+                        $.ajax({
+                            url: "{{ route('ajax.store') }}",
+                            type: "POST",
+                            data: new FormData(this),
+                            contentType: false,
+                            processData: false,
+                            success: function (data) {
+                                alert("تم النشر");
+                                $("#post_form").trigger("reset");
+                                // fetch_post();
+                            }
+                        });
+                    });
+                });
+            </script>
+@stop

@@ -25,4 +25,6 @@ Route::get('/Profile', 'App\Http\Controllers\ProfileController@index')->name('pr
 Route::get('/posts', 'App\Http\Controllers\PostController@index')->name('allposts');
 
 Route::get('/dashbord', 'App\Http\Controllers\DashbordController@index')->name('dashbord');
+Route::post('store', 'App\Http\Controllers\PostController@store')->name('ajax.store');
+
 
