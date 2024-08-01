@@ -19,6 +19,7 @@ class PostController extends Controller
     {
         $posts = Post::all();
         return view('main.allpost')->with('posts', $posts);
+
     }
 
     function saveImage($photo, $folder)
@@ -37,8 +38,7 @@ class PostController extends Controller
     {
 
 
-
-            $file_name = $this->saveImage($request->file('files'), 'images/offers');
+        $file_name = $this->saveImage($request->file('files'), 'images/offers');
 
 
         // Create the post
@@ -60,6 +60,7 @@ class PostController extends Controller
         return response()->json(['success' => 'Post created successfully'], 200);
 
     }
+
 
 
 }
