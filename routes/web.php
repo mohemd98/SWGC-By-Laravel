@@ -28,4 +28,3 @@ Route::get('/dashbord', 'App\Http\Controllers\DashbordController@index')->name('
 Route::post('store', 'App\Http\Controllers\PostController@store')->name('ajax.store');
 
 
-

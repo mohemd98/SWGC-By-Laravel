@@ -11,37 +11,57 @@
                     <div class="card-body">
                         <h5 class="card-header">فلاتر</h5>
 
-                        <?php
-
-
-                        ?>
-
-                            <!-- -------------------- -->
+                        <!-- -------------------- -->
 
                         <div class="list-group">
                             <h3>محافظات</h3>
                             <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
 
+                                    @foreach($distinctCities as $city)
+                                        <div class="list-group-item checkbox">
+                                            <label><input type="checkbox" class="common_selector city" value="{{ $city }}"> {{ $city }}</label>
+                                        </div>
+                                    @endforeach
                             </div>
                         </div>
 
                         <div class="list-group">
                             <h3>نوع النشر</h3>
-
+                            <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
+                                @foreach($distinctTypes as $type)
+                                    <div class="list-group-item checkbox">
+                                        <label><input type="checkbox" class="common_selector type" value="{{ $type }}"> {{ $type }}</label>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
 
                         <div class="list-group">
                             <h3>المطلوب</h3>
-
+                            <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
+                                @foreach($distinctWants as $want)
+                                    <div class="list-group-item checkbox">
+                                        <label><input type="checkbox" class="common_selector want" value="{{ $want }}"> {{ $want }}</label>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
+
                         <div class="list-group">
                             <h3>الجنس</h3>
-                       
+                            <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
+                                @foreach($distinctGenders as $gender)
+                                    <div class="list-group-item checkbox">
+                                        <label><input type="checkbox" class="common_selector gender" value="{{ $gender }}"> {{ $gender }}</label>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
 
                         <!-- ---------------------- -->
 
                     </div>
+
                 </div>
             </div>
             <!-- ---------------------------------------------------------- -->
@@ -55,6 +75,10 @@
             </div>
         </div>
     </div>
+
+
+
+
 
 
 @endsection

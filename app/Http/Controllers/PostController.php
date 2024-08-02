@@ -18,7 +18,20 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('main.allpost')->with('posts', $posts);
+
+        // Get distinct attributes
+        $distinctCities = Post::distinct()->pluck('post_city');
+        $distinctWants = Post::distinct()->pluck('post_want');
+        $distinctGenders = Post::distinct()->pluck('post_gender');
+        $distinctTypes = Post::distinct()->pluck('post_type');
+
+        return view('main.allpost')->with([
+            'posts' => $posts,
+            'distinctCities' => $distinctCities,
+            'distinctWants' => $distinctWants,
+            'distinctGenders' => $distinctGenders,
+            'distinctTypes' => $distinctTypes
+        ]);
 
     }
 
@@ -60,6 +73,11 @@ class PostController extends Controller
         return response()->json(['success' => 'Post created successfully'], 200);
 
     }
+
+
+
+
+
 
 
 
